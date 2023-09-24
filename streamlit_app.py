@@ -1,19 +1,17 @@
+# Basic_Streamlit_App
 import streamlit as st
 import pandas as pd
 import openai
 
-# st.write("""
-# # My first app
-# Hello *world!*
-# """)
-#
-# df = pd.read_csv("my_data.csv")
-# st.line_chart(df)
+# Load settings
+openai_api_key = st.secrets["openai"]["key"]
 
-# Demo code by Streamlit: https://github.com/streamlit/llm-examples/tree/main
+
+# Implement demo code by Streamlit: https://github.com/streamlit/llm-examples/tree/main
 with st.sidebar:
-    openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-    "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
+    # openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+    # "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
+    st.write("Hello *world!*")
     "[View the source code](https://github.com/carlosmirandadurand/Basic_Streamlit_App)"
 
 st.title("💬 Basic Streamlit App")
@@ -36,4 +34,11 @@ if prompt := st.chat_input():
     msg = response.choices[0].message
     st.session_state.messages.append(msg)
     st.chat_message("assistant").write(msg.content)
-    
+
+
+
+# TODO: Test more components later...
+# df = pd.read_csv("my_data.csv")
+# st.line_chart(df)
+
+
