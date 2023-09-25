@@ -1,4 +1,5 @@
-# Basic_Streamlit_App
+# Implement demo code by Streamlit: https://github.com/streamlit/llm-examples/tree/main
+
 import streamlit as st
 import pandas as pd
 import openai
@@ -6,19 +7,15 @@ import openai
 # Load settings
 openai_api_key = st.secrets["openai"]["key"]
 
-
-# Implement demo code by Streamlit: https://github.com/streamlit/llm-examples/tree/main
-with st.sidebar:
-    # openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-    # "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
-    st.write("Hello *world!*")
-    "[View the source code](https://github.com/carlosmirandadurand/Basic_Streamlit_App)"
-
-st.title("💬 Basic Streamlit App")
+# Display app basic information
+st.title("💬 Basic ChatGPT Example (Another Session)")
 st.caption("🚀 Interact with the OpenAI ChatGPT API")
+
+# Initialize the web session
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
+# Execute
 for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
@@ -34,11 +31,4 @@ if prompt := st.chat_input():
     msg = response.choices[0].message
     st.session_state.messages.append(msg)
     st.chat_message("assistant").write(msg.content)
-
-
-
-# TODO: Test more components later...
-# df = pd.read_csv("my_data.csv")
-# st.line_chart(df)
-
 
