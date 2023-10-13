@@ -4,3 +4,6 @@ openai
 trubrics>=1.4.3
 streamlit-feedback
 streamlit-tags
+tiktoken
+pinecone-client[grpc]
+pinecone_datasets
