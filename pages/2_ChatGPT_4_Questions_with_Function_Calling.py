@@ -487,7 +487,7 @@ openai_api_key = st.secrets["openai"]["key"]
 _, system_message = chat_gpt_basic_BI_agent('no prompt yet')
 
 # Display app basic information
-st.title("ChatGPT 4.0 Questions_with Function Calling")
+st.title("ChatGPT 4.0 Questions with Function Calling")
 st.caption("ChatGPT is a report generation robot. Ask a business question about hospital expenditures. ChatGPT should interpret it and call the right reporting function.")
 
 # Initialize the web session
