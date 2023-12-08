@@ -363,23 +363,25 @@ def generate_and_send_generic_spend_report( title                   ,
                                             fiscal_calendar         = None, 
                                             metrics                 = None, 
                                             dimensions              = None):
-    response = f"Report has been generated. Please respond to the user: 'Report {title} sent.'"
-    print(f'generate_and_send_generic_spend_report(title                  : {title                  } ')
-    print(f'                                       vendor_filter_list     : {vendor_filter_list     } ')
-    print(f'                                       category_filter_list   : {category_filter_list   } ')
-    print(f'                                       hospital_filter_list   : {hospital_filter_list   } ')
-    print(f'                                       department_filter_list : {department_filter_list } ')
-    print(f'                                       division_filter_list   : {division_filter_list   } ')
-    print(f'                                       gl_account_filter_list : {gl_account_filter_list } ')
-    print(f'                                       time_period_filter_list: {time_period_filter_list} ')
-    print(f'                                       fiscal_calendar        : {fiscal_calendar        } ')
-    print(f'                                       metrics                : {metrics                } ')
-    print(f'                                       dimensions             : {dimensions             } ')
-    print(f'                                       user_request           : {user_request           } ')
-    print(f'                                       ) --> {response} \n')
+    command = f"""generate_and_send_generic_spend_report(
+        title                  : {title                  } 
+        vendor_filter_list     : {vendor_filter_list     } 
+        category_filter_list   : {category_filter_list   } 
+        hospital_filter_list   : {hospital_filter_list   } 
+        department_filter_list : {department_filter_list } 
+        division_filter_list   : {division_filter_list   } 
+        gl_account_filter_list : {gl_account_filter_list } 
+        time_period_filter_list: {time_period_filter_list} 
+        fiscal_calendar        : {fiscal_calendar        } 
+        metrics                : {metrics                } 
+        dimensions             : {dimensions             } 
+        user_request           : {user_request           } 
+        )
+    """
+    response = f"Generic spend report has been generated. Please respond to the user: 'Report {title} sent.'"
     return response
 
-def generate_and_send_benchmarking_spend_report(    title                   ,
+def genete_and_send_benchmarking_spend_report(    title                   ,
                                                     user_request            , 
                                                     vendor_filter_list      = None, 
                                                     category_filter_list    = None,
@@ -389,18 +391,20 @@ def generate_and_send_benchmarking_spend_report(    title                   ,
                                                     gl_account_filter_list  = None,
                                                     time_period_filter_list = None,
                                                     fiscal_calendar         = None):
-    response = f"Report has been generated. Please respond to the user: 'Report {title} sent.'"
-    print(f'generate_and_send_benchmarking_spend_report(title                  : {title                  } ')
-    print(f'                                            vendor_filter_list     : {vendor_filter_list     } ')
-    print(f'                                            category_filter_list   : {category_filter_list   } ')
-    print(f'                                            hospital_filter_list   : {hospital_filter_list   } ')
-    print(f'                                            department_filter_list : {department_filter_list } ')
-    print(f'                                            division_filter_list   : {division_filter_list   } ')
-    print(f'                                            gl_account_filter_list : {gl_account_filter_list } ')
-    print(f'                                            time_period_filter_list: {time_period_filter_list} ')
-    print(f'                                            fiscal_calendar        : {fiscal_calendar        } ')
-    print(f'                                            user_request           : {user_request           } ')
-    print(f'                                            ) --> {response} \n')
+    command = f"""generate_and_send_benchmarking_spend_report(
+        title                  : {title                  }
+        vendor_filter_list     : {vendor_filter_list     }
+        category_filter_list   : {category_filter_list   }
+        hospital_filter_list   : {hospital_filter_list   }
+        department_filter_list : {department_filter_list }
+        division_filter_list   : {division_filter_list   }
+        gl_account_filter_list : {gl_account_filter_list }
+        time_period_filter_list: {time_period_filter_list}
+        fiscal_calendar        : {fiscal_calendar        }
+        user_request           : {user_request           }
+        )
+    """
+    response = f"Benchmarking report has been generated. Please respond to the user: 'Report {title} sent.'"
     return response
 
 def generate_and_send_market_share_report(  title                   , 
@@ -414,19 +418,21 @@ def generate_and_send_market_share_report(  title                   ,
                                             gl_account_filter_list  = None,
                                             time_period_filter_list = None,
                                             fiscal_calendar         = None):
-    response = f"Report has been generated. Please respond to the user: 'Report {title} sent.'"
-    print(f'generate_and_send_market_share_report(title                  : {title                  } ')
-    print(f'                                      share_metric           : {share_metric           } ')
-    print(f'                                      vendor_filter_list     : {vendor_filter_list     } ')
-    print(f'                                      category_filter_list   : {category_filter_list   } ')
-    print(f'                                      hospital_filter_list   : {hospital_filter_list   } ')
-    print(f'                                      department_filter_list : {department_filter_list } ')
-    print(f'                                      division_filter_list   : {division_filter_list   } ')
-    print(f'                                      gl_account_filter_list : {gl_account_filter_list } ')
-    print(f'                                      time_period_filter_list: {time_period_filter_list} ')
-    print(f'                                      fiscal_calendar        : {fiscal_calendar        } ')
-    print(f'                                      user_request           : {user_request           } ')
-    print(f'                                      ) --> {response} \n')
+    command = f"""generate_and_send_market_share_report(
+        title                  : {title                  } 
+        share_metric           : {share_metric           } 
+        vendor_filter_list     : {vendor_filter_list     } 
+        category_filter_list   : {category_filter_list   } 
+        hospital_filter_list   : {hospital_filter_list   } 
+        department_filter_list : {department_filter_list } 
+        division_filter_list   : {division_filter_list   } 
+        gl_account_filter_list : {gl_account_filter_list } 
+        time_period_filter_list: {time_period_filter_list} 
+        fiscal_calendar        : {fiscal_calendar        } 
+        user_request           : {user_request           } 
+        )
+    """
+    response = f"Marketshare report has been generated. Please respond to the user: 'Report {title} sent.'"
     return response
 
 def generate_and_send_vendor_market_share_map(  title                   , 
@@ -440,19 +446,21 @@ def generate_and_send_vendor_market_share_map(  title                   ,
                                                 gl_account_filter_list  = None,
                                                 time_period_filter_list = None,
                                                 fiscal_calendar         = None):
-    response = f"Report has been generated. Please respond to the user: 'Report {title} sent.'"
-    print(f'generate_and_send_vendor_market_share_map(title                  : {title                  } ')
-    print(f'                                          share_metric           : {share_metric           } ')
-    print(f'                                          vendor_filter_list     : {vendor_filter_list     } ')
-    print(f'                                          category_filter_list   : {category_filter_list   } ')
-    print(f'                                          hospital_filter_list   : {hospital_filter_list   } ')
-    print(f'                                          department_filter_list : {department_filter_list } ')
-    print(f'                                          division_filter_list   : {division_filter_list   } ')
-    print(f'                                          gl_account_filter_list : {gl_account_filter_list } ')
-    print(f'                                          time_period_filter_list: {time_period_filter_list} ')
-    print(f'                                          fiscal_calendar        : {fiscal_calendar        } ')
-    print(f'                                          user_request           : {user_request           } ')
-    print(f'                                          ) --> {response} \n')
+    command = f"""generate_and_send_vendor_market_share_map(
+        title                  : {title                  } 
+        share_metric           : {share_metric           } 
+        vendor_filter_list     : {vendor_filter_list     } 
+        category_filter_list   : {category_filter_list   } 
+        hospital_filter_list   : {hospital_filter_list   } 
+        department_filter_list : {department_filter_list } 
+        division_filter_list   : {division_filter_list   } 
+        gl_account_filter_list : {gl_account_filter_list } 
+        time_period_filter_list: {time_period_filter_list} 
+        fiscal_calendar        : {fiscal_calendar        } 
+        user_request           : {user_request           } 
+        )
+    """
+    response = f"Marketshare Map has been generated. Please respond to the user: 'Report {title} sent.'"
     return response
 
 
@@ -479,8 +487,8 @@ openai_api_key = st.secrets["openai"]["key"]
 _, system_message = chat_gpt_basic_BI_agent('no prompt yet')
 
 # Display app basic information
-st.title("ChatGPT 4.0 as BI Analyst")
-st.caption("Ask a business question about hospital expenditures")
+st.title("ChatGPT 4.0 Questions_with Function Calling")
+st.caption("ChatGPT is a report generation robot. Ask a business question about hospital expenditures. ChatGPT should interpret it and call the right reporting function.")
 
 # Initialize the web session
 if "messages" not in st.session_state:
@@ -488,7 +496,8 @@ if "messages" not in st.session_state:
 
 # Execute
 for msg in st.session_state.messages:
-    st.chat_message(msg["role"]).write(msg["content"])
+    if msg["role"] != 'system':
+        st.chat_message(msg["role"]).write(msg["content"])
 
 if prompt := st.chat_input():
     if not openai_api_key:
@@ -498,12 +507,12 @@ if prompt := st.chat_input():
     #     st.info("Please add your OpenAI API key to continue.")
     #     st.stop()
 
+    openai.api_key = openai_api_key
 
     # Prepare the message
-    openai.api_key = openai_api_key
-    prompt_final, _ = chat_gpt_basic_BI_agent(prompt)
-    st.session_state.messages.append({"role": "user", "content": prompt_final})
-    st.chat_message("user").write(prompt_final)
+    # prompt, _ = chat_gpt_basic_BI_agent(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.chat_message("user").write(prompt)
 
     # Call the API
     response = openai.ChatCompletion.create(model       = 'gpt-4', 
@@ -552,12 +561,10 @@ if prompt := st.chat_input():
                                                     })
                     
                 # When the response is a call-back function, return the function results to the user
-                response_content.append({"role"         : "tool", 
-                                    "tool_call_id" : tool['id'], 
-                                    "name"         : function_name, 
-                                    "arguments"    : function_args,
-                                    "content"      : function_response,
-                                    })
+                response_content.append({   "function called" : function_name, 
+                                            "arguments"       : function_args,
+                                            "response"        : function_response,
+                                            })
 
     # Display the response to the app user
     st.chat_message("assistant").write(response_content)
