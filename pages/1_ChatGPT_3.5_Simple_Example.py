@@ -8,7 +8,7 @@ import openai
 openai_api_key = st.secrets["openai"]["key"]
 
 # Display app basic information
-st.title("💬 Basic ChatGPT Example (Another Session)")
+st.title("💬 Basic ChatGPT 3.5-turbo Example")
 st.caption("🚀 Interact with the OpenAI ChatGPT API")
 
 # Initialize the web session
