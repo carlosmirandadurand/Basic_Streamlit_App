@@ -262,6 +262,9 @@ if prompt := st.chat_input():
     st.chat_message("user").write(prompt)
 
     # Call the API
-    response_content = call_llama2_on_replicate(prompt)    
+    response_content = call_llama2_on_replicate(prompt)  
+    st.session_state.messages.append({"role": "assistant", "content": response_content})  
     st.chat_message("assistant").write(response_content)
+
+
 
